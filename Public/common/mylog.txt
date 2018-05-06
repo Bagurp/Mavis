@@ -1,0 +1,1 @@
+SELECT * FROM photos WHERE photo_id = '34' LIMIT 1

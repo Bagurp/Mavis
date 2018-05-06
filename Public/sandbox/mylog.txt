@@ -1,0 +1,1 @@
+INSERT INTO users (first_name, last_name, username, password, type, comment) VALUES ( 'abcd', 'abcd', 'abcd', '$2y$10$v7hisJ8Q81eznhvU2N4hhur5BD0iYyfSL.vAaZImUmDcEyit/vvZ.', 'u','No Comment.')

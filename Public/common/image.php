@@ -1,0 +1,41 @@
+<?php
+try {
+  require_once '../../includes/initialize.inc';
+} catch (Exception $e) {
+$message = $e->getMessage();
+}
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="../stylesheets/mystyle.css">
+  </head>
+  <body>
+    <h1>Class of 2018 Pictures</h1>
+    <hr>
+    <h2>It's Good Time</h2>
+    <hr>
+
+    <!-- HomeWork by Pramukh Dayananda Bagur - K00405790 -->
+    <!-- Problem number 1 - breadcrumbs -->
+    <form>
+    <button formaction="../admin/index.php">Click here to go to Home!</button>
+    </form>
+    <div class="wrapper">
+      <div class="outerItem" style="width:95%">
+        <?php
+        try {
+          // find a photo using photo_id
+          $photo = Photo::find_photo($_GET['photo_id']);
+        } catch (Exception $e) {
+          $photo_message = $e->getMessage();
+        }
+        ?>
+        <!-- display image using $Photo returned from find_photo -->
+        <img src="<?php echo '..'.DS.'images'.DS.$photo['file_name'];?>" width="100%">
+      </div>
+    </div>
+  </body>
+</html>
